@@ -1,0 +1,8 @@
+@use '../abstracts' as *;
+.tertiary {
+  @extend %box;
+
+  gap: 1em;
+}
+
+// todo : modificar h2 responsive y h3 de los cards

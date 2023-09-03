@@ -1,0 +1,16 @@
+@use '../abstracts' as *;
+.secondary {
+  @extend %box;
+
+  align-items: center;
+  text-align: center;
+  gap: 1.3em;
+  &__amount {
+    font-size: 2em;
+  }
+  &__line {
+    width: 30%;
+    height: 2px;
+    background-color: lighten(fn-color(neutral-gray), 40%);
+  }
+}

@@ -1,0 +1,14 @@
+@use '../abstracts' as *;
+
+main {
+  background-color: lighten(fn-color(neutral-gray), 45%);
+}
+img {
+  width: 100%;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}

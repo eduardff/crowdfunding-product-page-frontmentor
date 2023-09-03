@@ -1,0 +1,30 @@
+@use '../abstracts' as *;
+.btn {
+  border-radius: 100vw;
+  padding: 0.8em 2em;
+  background-color: fn-color(primary-cyan);
+  border: none;
+  color: #fff;
+  font-weight: fn-weight(bold);
+  cursor: pointer;
+}
+.btn-bookmark {
+  @extend .btn;
+
+  background-color: transparent;
+  padding: 0;
+  @include mq(small) {
+    display: flex;
+    align-items: center;
+    background-color: lighten(fn-color(neutral-gray), 40%);
+    gap: 1em;
+    padding: 0 2em 0 0;
+  }
+  span {
+    display: none;
+    color: fn-color(neutral-gray);
+    @include mq(small) {
+      display: block;
+    }
+  }
+}

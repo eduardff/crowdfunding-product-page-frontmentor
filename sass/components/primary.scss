@@ -1,0 +1,23 @@
+@use '../abstracts' as *;
+.primary {
+  @extend %box;
+
+  position: relative;
+  align-items: center;
+  text-align: center;
+  gap: 1.3em;
+  padding: clamp(3em, 5vw, 3.5em) clamp(1.5em, 5vw, 2.5em)
+    clamp(1.5em, 5vw, 2.5em);
+  &__logo {
+    width: 60px;
+    position: absolute;
+    top: -29px;
+  }
+
+  &__buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5em;
+  }
+}

@@ -1,0 +1,29 @@
+$container-width:      1440px;
+$border-radius:        1em;
+
+$font-weights: (
+  regular:             400,
+  medium:              500,
+  bold:                700,
+);
+$color-palette: (
+  primary-cyan:        hsl(176, 50%, 47%),
+  secondary-cyan-dark: hsl(176, 72%, 28%),
+  neutral-black:       hsl(0, 0%, 0%),
+  neutral-gray:        hsl(0, 0%, 48%),
+);
+
+$breakpoints: (
+  small:               40em, // 640px
+  medium:              65em // 1040px
+);
+
+$layers: (
+  dropdown:            1000,
+  sticky:              1020,
+  fixed:               1030,
+  modal-backdrop:      1040,
+  modal:               1050,
+  popover:             1060,
+  tooltip:             1070,
+);

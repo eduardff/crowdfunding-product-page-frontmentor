@@ -1,0 +1,17 @@
+@use '../abstracts' as *;
+.header {
+  position: relative;
+  &__items {
+    position: absolute;
+    // inset: 4em 0;
+    inset: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
+    flex-wrap: wrap;
+    width: min(90%, $container-width);
+    margin-inline: auto;
+    margin-top: 2em;
+  }
+}

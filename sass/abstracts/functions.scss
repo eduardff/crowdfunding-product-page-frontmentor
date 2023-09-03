@@ -1,0 +1,14 @@
+@use 'vars' as *;
+// font-weight
+@function fn-weight($weight) {
+  @return map-get($font-weights, $weight);
+}
+
+// colors
+@function fn-color($color) {
+  @return map-get($color-palette, $color);
+}
+// z-index
+@function fn-order($order) {
+  @return map-get($layers, $order);
+}

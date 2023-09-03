@@ -1,0 +1,12 @@
+@use '../abstracts' as *;
+
+.container {
+  width: min(90%, $container-width / 2);
+  margin-inline: auto;
+  margin-top: -3em;
+  position: relative;
+  z-index: fn-order(dropdown);
+
+  display: grid;
+  gap: 3em;
+}

@@ -1,0 +1,10 @@
+@use 'vars' as *;
+
+%box {
+  background-color: #fff;
+  border-radius: $border-radius;
+  padding: clamp(1.5em, 5vw, 2.5em);
+
+  display: flex;
+  flex-flow: column;
+}

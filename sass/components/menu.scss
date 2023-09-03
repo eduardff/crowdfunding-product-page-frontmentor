@@ -1,0 +1,47 @@
+@use '../abstracts' as *;
+
+.nav {
+  width: 100%;
+  background-color: #fff;
+  border-radius: $border-radius;
+  display: none;
+  position: relative;
+  z-index: fn-order(fixed);
+
+  @include mq(small) {
+    display: block;
+    width: auto;
+    background-color: transparent;
+  }
+}
+.nav-show {
+  display: block;
+}
+
+.menu-toggle {
+  cursor: pointer;
+  @include mq(small) {
+    display: none;
+  }
+}
+.menu {
+  &__item:not(:last-child) {
+    border-bottom: 1px solid lighten(fn-color(neutral-gray), 40%);
+    @include mq(small) {
+      border-bottom: none;
+    }
+  }
+  &__link {
+    display: block;
+    padding: 1.5em 1em;
+    font-weight: bold;
+    color: fn-color(neutral-black);
+    font-weight: fn-weight(medium);
+    @include mq(small) {
+      color: #fff;
+    }
+  }
+  @include mq(small) {
+    display: flex;
+  }
+}

@@ -1,0 +1,13 @@
+@use 'vars' as *;
+
+@mixin mq($size) {
+  @if map-has-key($breakpoints, $size) {
+    @media screen and (min-width: map-get($breakpoints,$size)) {
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: $size) {
+      @content;
+    }
+  }
+}
