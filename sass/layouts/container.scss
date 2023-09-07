@@ -8,5 +8,5 @@
   z-index: fn-order(dropdown);
 
   display: grid;
-  gap: 3em;
+  gap: clamp(1em, 5vw, 1.5em);
 }

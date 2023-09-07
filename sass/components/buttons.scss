@@ -7,24 +7,44 @@
   color: #fff;
   font-weight: fn-weight(bold);
   cursor: pointer;
+  &:hover {
+    background-color: fn-color(secondary-cyan-dark);
+  }
 }
 .btn-bookmark {
   @extend .btn;
 
   background-color: transparent;
   padding: 0;
+  color: fn-color(primary-cyan);
   @include mq(small) {
     display: flex;
     align-items: center;
-    background-color: lighten(fn-color(neutral-gray), 40%);
+    background-color: lighten(fn-color(neutral-gray), 50%);
     gap: 1em;
     padding: 0 2em 0 0;
   }
   span {
     display: none;
-    color: fn-color(neutral-gray);
     @include mq(small) {
       display: block;
     }
   }
+  svg circle {
+    fill: hsl(176, 50%, 47%);
+  }
+  svg path {
+    fill: #fff;
+  }
+  // &:hover {
+  //   background-color: red;
+  // }
 }
+.btn-disabled {
+  @extend .btn;
+  // background-color: lighten(fn-color(neutral-gray), 40%);
+  background-color: fn-color(neutral-gray);
+}
+// .btn-bookmark svg circle {
+//   fill: hsl(176, 50%, 47%);
+// }
