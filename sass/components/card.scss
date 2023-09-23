@@ -2,50 +2,37 @@
 .card {
   position: relative;
   @extend %box;
-  gap: clamp(1.5em, 5vw, 2em);
   border: 1px solid lighten(fn-color(neutral-gray), 40%);
   font-size: clamp(0.875rem, 0.7143rem + 0.7143vw, 1rem);
-  &__header {
-    h3 {
-      font-weight: fn-weight(bold);
-      margin-bottom: 0.5em;
-    }
-    span {
-      color: fn-color(primary-cyan);
-    }
+
+  @include mq(small) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2em;
+  }
+  div:where(:not(:first-child):not(:last-child)) {
+    margin-bottom: 2em;
     @include mq(small) {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      margin: 0;
     }
   }
-  &__body {
-    display: flex;
-    flex-direction: column;
-    gap: clamp(1.5em, 5vw, 2em);
+  &__title {
+    font-weight: fn-weight(bold);
+    margin-bottom: 0.5em;
     @include mq(small) {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-    }
-    button {
-      width: 180px;
+      margin: 0;
     }
   }
+
   &__number {
-    font-size: 2em;
     display: flex;
     align-items: center;
     gap: 0.3em;
+    font-size: 2em;
   }
-  // añadir degradado al ultimo card hijo
+  // añadir un disabled al ultimo card hijo
   &:last-child::before {
-    content: '';
-    background-color: lighten(fn-color(neutral-gray), 100%);
-    opacity: 0.5;
-    position: absolute;
-    inset: 0;
-    border-radius: $border-radius;
+    @extend %element-disabled;
   }
 }

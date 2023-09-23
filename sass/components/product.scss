@@ -1,0 +1,137 @@
+@use '../abstracts' as *;
+.product {
+  position: relative;
+
+  border: 1px solid lighten(fn-color(neutral-gray), 40%);
+  // border: 1px solid fn-color(primary-cyan);
+  border-radius: $border-radius;
+  font-size: clamp(0.875rem, 0.7143rem + 0.7143vw, 1rem);
+
+  &__content {
+    padding: clamp(1.5em, 5vw, 2em);
+
+    // border-top-left-radius: $border-radius;
+    // border-top-right-radius: $border-radius;
+
+    // border-bottom-left-radius: $border-radius;
+    // border-bottom-right-radius: $border-radius;
+
+    // usar este borde cuando el cuadro se abra
+    border-bottom: 1px solid lighten(fn-color(neutral-gray), 40%);
+  }
+  &__body {
+    display: flex;
+    gap: 1em;
+  }
+  &__select {
+    border: 1px solid lighten(fn-color(neutral-gray), 40%);
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 1em;
+    @include mq(small) {
+      margin-top: 0;
+    }
+    input[type='radio'] {
+      display: block;
+      appearance: none;
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      cursor: pointer;
+      transition: 0.2s all linear;
+      &:checked {
+        width: 15px;
+        height: 15px;
+        background-color: fn-color(primary-cyan);
+      }
+    }
+  }
+  &__project {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1em;
+    @include mq(small) {
+      flex-direction: row;
+      justify-content: space-between;
+      div:first-child {
+        order: 1;
+      }
+      p {
+        order: 3;
+      }
+      div:last-child {
+        order: 2;
+      }
+    }
+  }
+  &__title {
+    display: flex;
+    flex-direction: column;
+    @include mq(small) {
+      flex-direction: row;
+      gap: 1em;
+    }
+  }
+  &__text {
+    margin-left: -2.5em;
+    @include mq(small) {
+      margin-left: 0;
+    }
+  }
+  &__number {
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+    margin-left: -2.5em;
+    @include mq(small) {
+      margin-left: 0;
+    }
+  }
+
+  // parte que se va ocultar
+
+  &__collapsible {
+    padding: clamp(1.5em, 5vw, 2em);
+  }
+  &__hidden {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    padding-top: 1em;
+    @include mq(small) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  &__controls {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
+  &__input {
+    position: relative;
+
+    input[type='text'] {
+      padding: 0.8em 2em;
+      width: 7em;
+      border-radius: 50vw;
+      border: none;
+      outline: 1px solid lighten(fn-color(neutral-gray), 40%);
+    }
+    .icon {
+      position: absolute;
+      left: 0.7em;
+      top: 1em;
+    }
+  }
+  // añadir un disabled al ultimo card hijo
+  &:last-child::before {
+    @extend %element-disabled;
+  }
+}

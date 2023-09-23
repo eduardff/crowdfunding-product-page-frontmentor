@@ -1,6 +1,5 @@
 @use '../abstracts' as *;
 .tertiary {
   @extend %box;
-
   gap: 1em;
 }

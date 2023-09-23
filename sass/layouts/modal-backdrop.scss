@@ -1,0 +1,6 @@
+@use '../abstracts' as *;
+
+.modal-backdrop {
+  @extend %modal-backdrop;
+  overflow: auto;
+}

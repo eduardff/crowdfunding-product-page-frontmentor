@@ -16,7 +16,6 @@
 
   background-color: transparent;
   padding: 0;
-  color: fn-color(primary-cyan);
   @include mq(small) {
     display: flex;
     align-items: center;
