@@ -1,5 +1,7 @@
-import { showMenu } from './counter';
+import { showMenu } from './js/menu';
+import { getModal } from './js/select';
 import './sass/style.scss';
 import 'animate.css';
 
-showMenu(document.getElementById('menu-toggle'));
+showMenu(document.getElementById('hamburger-icon'));
+getModal();

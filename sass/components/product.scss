@@ -17,7 +17,7 @@
     // border-bottom-right-radius: $border-radius;
 
     // usar este borde cuando el cuadro se abra
-    border-bottom: 1px solid lighten(fn-color(neutral-gray), 40%);
+    // border-bottom: 1px solid lighten(fn-color(neutral-gray), 40%);
   }
   &__body {
     display: flex;
@@ -97,6 +97,11 @@
 
   &__collapsible {
     padding: clamp(1.5em, 5vw, 2em);
+    border-top: 1px solid lighten(fn-color(neutral-gray), 40%);
+    display: none;
+  }
+  &__expanded {
+    display: block;
   }
   &__hidden {
     display: flex;

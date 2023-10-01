@@ -18,7 +18,7 @@
   display: block;
 }
 
-.menu-toggle {
+.hamburger-icon {
   cursor: pointer;
   @include mq(small) {
     display: none;

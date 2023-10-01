@@ -1,11 +1,16 @@
 @use '../abstracts' as *;
 
-.select-modal {
+.product-modal {
+  position: relative;
   @extend %box;
   gap: 2em;
   width: min(90%, $container-width / 2);
   margin-inline: auto;
   margin-top: 15rem;
   margin-bottom: 10rem;
-  // z-index: fn-order(modal);
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }

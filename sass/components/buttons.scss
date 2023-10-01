@@ -47,3 +47,18 @@
 // .btn-bookmark svg circle {
 //   fill: hsl(176, 50%, 47%);
 // }
+.btn-clear-modal {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100vw;
+  width: 25px;
+  height: 25px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+
+  svg path:hover {
+    fill: #b10808;
+  }
+}
