@@ -100,9 +100,6 @@
     border-top: 1px solid lighten(fn-color(neutral-gray), 40%);
     display: none;
   }
-  &__expanded {
-    display: block;
-  }
   &__hidden {
     display: flex;
     flex-direction: column;

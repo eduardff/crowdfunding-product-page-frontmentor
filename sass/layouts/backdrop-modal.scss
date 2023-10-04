@@ -1,6 +1,12 @@
 @use '../abstracts' as *;
 
 .modal-backdrop {
-  @extend %modal-backdrop;
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000050;
+  z-index: fn-order(modal-backdrop);
   overflow: auto;
+  visibility: hidden;
 }

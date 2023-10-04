@@ -52,13 +52,15 @@
   justify-content: center;
   align-items: center;
   border-radius: 100vw;
-  width: 25px;
-  height: 25px;
   background-color: #fff;
   border: none;
   cursor: pointer;
-
+  // img:hover {
+  //   // fill: black;
+  //   opacity: 1;
+  // }
   svg path:hover {
-    fill: #b10808;
+    fill: black;
+    opacity: 1;
   }
 }
