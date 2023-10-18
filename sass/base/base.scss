@@ -17,3 +17,7 @@ span {
   color: fn-color(primary-cyan);
   display: block;
 }
+label:hover {
+  color: fn-color(primary-cyan);
+  cursor: pointer;
+}

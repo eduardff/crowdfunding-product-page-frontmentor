@@ -1,3 +1,6 @@
+import { sendForm } from './form';
+
+// funciones de utilidad
 const removeStyle = () => {
   document.querySelectorAll('.product').forEach((element) => {
     element.style.borderColor = '';
@@ -6,17 +9,20 @@ const removeStyle = () => {
     element.style.display = 'none';
   });
 };
+
+const $main = document.getElementById('main');
 const selectInputRadio = () => {
-  const $main = document.getElementById('main');
   $main.addEventListener('click', (event) => {
-    if (event.target.type === 'radio') {
+    const radioInput = event.target.checked;
+    if (radioInput) {
       const pledgeBox = event.target.closest('.product');
+      const form = pledgeBox.querySelector('form');
       removeStyle();
       pledgeBox.style.borderColor = 'hsl(176, 50%, 47%)';
       pledgeBox.children[1].style.display = 'block';
+      sendForm(form);
     }
   });
 };
-export { selectInputRadio };
 
-// nota  : el titulo de cada inputradio deberia ser un label para que al dar click al nombre se eleccione
+export { selectInputRadio, removeStyle };

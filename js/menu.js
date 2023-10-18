@@ -1,6 +1,7 @@
 const createElement = (body) => {
   const element = document.createElement('div');
   element.classList.add('modal-backdrop');
+  element.style.visibility = 'visible';
   body.prepend(element);
 };
 const toggleMenu = (menuNav) => {

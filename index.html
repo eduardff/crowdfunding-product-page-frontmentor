@@ -60,7 +60,7 @@
           </div>
 
           <div class="primary__buttons">
-            <button class="btn">Back this project</button>
+            <button class="btn" data-btn="project">Back this project</button>
             <button class="btn-bookmark">
               <!-- <img src="public/icon-bookmark.svg" alt="" /> -->
               <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg">
@@ -128,7 +128,9 @@
                   <p>left</p>
                 </strong>
               </div>
-              <div><button class="btn">Select Reward</button></div>
+              <div>
+                <button class="btn" data-btn="bamboo">Select Reward</button>
+              </div>
             </div>
             <!-- card 2 -->
             <div class="card">
@@ -149,7 +151,9 @@
                   <p>left</p>
                 </strong>
               </div>
-              <div><button class="btn">Select Reward</button></div>
+              <div>
+                <button class="btn" data-btn="black">Select Reward</button>
+              </div>
             </div>
             <!-- card 3 -->
             <div class="card">
@@ -203,14 +207,15 @@
                       <div class="product__select">
                         <input
                           type="radio"
-                          name="contact"
-                          value="Bambo Stand"
+                          name="monitor"
+                          value="pledge"
+                          id="pledge"
                         />
                       </div>
                     </div>
                     <div class="product__project">
                       <div class="product__title">
-                        <h4>Pledge with no reward</h4>
+                        <label for="pledge">Pledge with no reward</label>
                         <span>Pledge $25 or more </span>
                       </div>
                       <p class="product__text">
@@ -231,32 +236,35 @@
                 <div class="product__collapsible">
                   <div class="product__hidden">
                     <div>Enter your pledge</div>
-                    <div class="product__controls">
+                    <form class="product__controls">
                       <div class="product__input">
                         <i class="fa-solid fa-dollar-sign icon"></i>
-                        <input type="text" />
+                        <input type="text" required />
                       </div>
-                      <div><button class="btn">Continue</button></div>
-                    </div>
+                      <div>
+                        <button class="btn" type="submit">Continue</button>
+                      </div>
+                    </form>
                   </div>
                 </div>
               </div>
               <!-- product 1 -->
-              <div class="product">
+              <div class="product" data-product="one">
                 <div class="product__content">
                   <div class="product__body">
                     <div>
                       <div class="product__select">
                         <input
                           type="radio"
-                          name="contact"
-                          value="Bambo Stand"
+                          name="monitor"
+                          value="Bamboo"
+                          id="bamboo"
                         />
                       </div>
                     </div>
                     <div class="product__project">
                       <div class="product__title">
-                        <h4>Bambo Stand</h4>
+                        <label for="bamboo">Bamboo Stand</label>
                         <span>Pledge $25 or more </span>
                       </div>
                       <p class="product__text">
@@ -277,13 +285,15 @@
                 <div class="product__collapsible">
                   <div class="product__hidden">
                     <div>Enter your pledge</div>
-                    <div class="product__controls">
+                    <form class="product__controls">
                       <div class="product__input">
                         <i class="fa-solid fa-dollar-sign icon"></i>
-                        <input type="text" />
+                        <input type="text" required />
                       </div>
-                      <div><button class="btn">Continue</button></div>
-                    </div>
+                      <div>
+                        <button class="btn" type="submit">Continue</button>
+                      </div>
+                    </form>
                   </div>
                 </div>
               </div>
@@ -295,14 +305,15 @@
                       <div class="product__select">
                         <input
                           type="radio"
-                          name="contact"
-                          value="Bambo Stand"
+                          name="monitor"
+                          value="Black"
+                          id="black"
                         />
                       </div>
                     </div>
                     <div class="product__project">
                       <div class="product__title">
-                        <h4>Black Edition Stand</h4>
+                        <label for="black">Black Edition Stand</label>
                         <span>Pledge $25 or more </span>
                       </div>
                       <p class="product__text">
@@ -323,13 +334,15 @@
                 <div class="product__collapsible">
                   <div class="product__hidden">
                     <div>Enter your pledge</div>
-                    <div class="product__controls">
+                    <form class="product__controls">
                       <div class="product__input">
                         <i class="fa-solid fa-dollar-sign icon"></i>
-                        <input type="text" />
+                        <input type="text" required />
                       </div>
-                      <div><button class="btn">Continue</button></div>
-                    </div>
+                      <div>
+                        <button class="btn" type="submit">Continue</button>
+                      </div>
+                    </form>
                   </div>
                 </div>
               </div>
@@ -341,14 +354,16 @@
                       <div class="product__select">
                         <input
                           type="radio"
-                          name="contact"
-                          value="Bambo Stand"
+                          name="monitor"
+                          value="Mahogany"
+                          id="mahogany"
                         />
                       </div>
                     </div>
                     <div class="product__project">
                       <div class="product__title">
-                        <h4>Mahogany Special Edition</h4>
+                        <!-- <h4>Mahogany Special Edition</h4> -->
+                        <label for="mahogany">Mahogany Special Edition</label>
                         <span>Pledge $200 or more </span>
                       </div>
                       <p class="product__text">
@@ -369,12 +384,26 @@
             </div>
           </article>
         </div>
+        <div class="modal-completed">
+          <div class="completed-modal">
+            <div class="completed-modal__image">
+              <img src="public/icon-check.svg" alt="" />
+            </div>
+            <h2>Thanks for your support!</h2>
+            <p>
+              Your pledge brings us one step closer to sharing Mastercraft
+              Bamboo Monitor Riser worldwide. You will get an email once our
+              campaign is completed.
+            </p>
+            <button class="btn">Got it!</button>
+          </div>
+        </div>
       </div>
     </main>
 
     <!-- templates  -->
     <template id="completed-modal ">
-      <div class="modal-backdrop">
+      <div class="modal-completed">
         <div class="completed-modal">
           <div class="completed-modal__image">
             <img src="public/icon-check.svg" alt="" />
@@ -387,187 +416,6 @@
           </p>
           <button class="btn">Got it!</button>
         </div>
-      </div>
-    </template>
-    <template id="product-modal">
-      <div class="modal-backdrop">
-        <article class="product-modal">
-          <div class="product-modal__header">
-            <h2>Back this project</h2>
-            <button class="btn-clear-modal">
-              <!-- <img src="public/icon-close-modal.svg" alt="" /> -->
-              <svg width="15" height="15" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M11.314 0l2.828 2.828L9.9 7.071l4.243 4.243-2.828 2.828L7.07 9.9l-4.243 4.243L0 11.314 4.242 7.07 0 2.828 2.828 0l4.243 4.242L11.314 0z"
-                  fill="#000"
-                  fill-rule="evenodd"
-                  opacity=".4"
-                />
-              </svg>
-            </button>
-          </div>
-          <p>
-            Want to support us in bringing Mastercraft Bamboo Monitor Riser out
-            in the world?
-          </p>
-          <div class="grid-container">
-            <!-- product 0 -->
-            <div class="product">
-              <div class="product__content">
-                <div class="product__body">
-                  <div>
-                    <div class="product__select">
-                      <input type="radio" name="contact" value="Bambo Stand" />
-                    </div>
-                  </div>
-                  <div class="product__project">
-                    <div class="product__title">
-                      <h4>Pledge with no reward</h4>
-                      <span>Pledge $25 or more </span>
-                    </div>
-                    <p class="product__text">
-                      Choose to support us without a reward if you simply
-                      believe in our project. As a backer, you will be signed up
-                      to receive product updates via email.
-                    </p>
-                    <!-- <div>
-                    <strong class="product__number"
-                      >101
-                      <p>left</p>
-                    </strong>
-                  </div> -->
-                  </div>
-                </div>
-              </div>
-              <!-- parte que se va ocultar -->
-              <div class="product__collapsible">
-                <div class="product__hidden">
-                  <div>Enter your pledge</div>
-                  <div class="product__controls">
-                    <div class="product__input">
-                      <i class="fa-solid fa-dollar-sign icon"></i>
-                      <input type="text" />
-                    </div>
-                    <div><button class="btn">Continue</button></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- product 1 -->
-            <div class="product">
-              <div class="product__content">
-                <div class="product__body">
-                  <div>
-                    <div class="product__select">
-                      <input type="radio" name="contact" value="Bambo Stand" />
-                    </div>
-                  </div>
-                  <div class="product__project">
-                    <div class="product__title">
-                      <h4>Bambo Stand</h4>
-                      <span>Pledge $25 or more </span>
-                    </div>
-                    <p class="product__text">
-                      Youget an ergonomic stand made of natural bamboo. You've
-                      helped us launch our promotional campaign, and you’ll be
-                      added to a special Backer member list.
-                    </p>
-                    <div>
-                      <strong class="product__number"
-                        >101
-                        <p>left</p>
-                      </strong>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- parte que se va ocultar -->
-              <div class="product__collapsible">
-                <div class="product__hidden">
-                  <div>Enter your pledge</div>
-                  <div class="product__controls">
-                    <div class="product__input">
-                      <i class="fa-solid fa-dollar-sign icon"></i>
-                      <input type="text" />
-                    </div>
-                    <div><button class="btn">Continue</button></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- product 2 -->
-            <div class="product">
-              <div class="product__content">
-                <div class="product__body">
-                  <div>
-                    <div class="product__select">
-                      <input type="radio" name="contact" value="Bambo Stand" />
-                    </div>
-                  </div>
-                  <div class="product__project">
-                    <div class="product__title">
-                      <h4>Black Edition Stand</h4>
-                      <span>Pledge $25 or more </span>
-                    </div>
-                    <p class="product__text">
-                      You get a Black Special Edition computer stand and a
-                      personal thank you. You’ll be added to our Backer member
-                      list. Shipping is included.
-                    </p>
-                    <div>
-                      <strong class="product__number"
-                        >64
-                        <p>left</p>
-                      </strong>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- parte que se va ocultar -->
-              <div class="product__collapsible">
-                <div class="product__hidden">
-                  <div>Enter your pledge</div>
-                  <div class="product__controls">
-                    <div class="product__input">
-                      <i class="fa-solid fa-dollar-sign icon"></i>
-                      <input type="text" />
-                    </div>
-                    <div><button class="btn">Continue</button></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- product 3 -->
-            <div class="product">
-              <div class="product__content">
-                <div class="product__body">
-                  <div>
-                    <div class="product__select">
-                      <input type="radio" name="contact" value="Bambo Stand" />
-                    </div>
-                  </div>
-                  <div class="product__project">
-                    <div class="product__title">
-                      <h4>Mahogany Special Edition</h4>
-                      <span>Pledge $200 or more </span>
-                    </div>
-                    <p class="product__text">
-                      You get two Special Edition Mahogany stands, a Backer
-                      T-Shirt, and a personal thank you. You’ll be added to our
-                      Backer member list. Shipping is included.
-                    </p>
-                    <div>
-                      <strong class="product__number"
-                        >0
-                        <p>left</p>
-                      </strong>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
       </div>
     </template>
 

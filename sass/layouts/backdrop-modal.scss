@@ -1,6 +1,7 @@
 @use '../abstracts' as *;
 
-.modal-backdrop {
+.modal-backdrop,
+.modal-completed {
   position: fixed;
   inset: 0;
   width: 100%;
